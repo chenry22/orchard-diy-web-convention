@@ -227,33 +227,6 @@ body {
   word-wrap: break-word;
 }
 
-@media (max-width: 400px) {
-  .info-container {
-    max-width: 65%;
-    justify-content: right;
-  }
-  .text-box {
-    height: 60%;
-    top: 20%;
-    width: 80%;
-    left: 10%;
-  }
-}
-@media (max-width: 900px) {
-  .info-container {
-    max-width: 65%;
-    justify-content: right;
-  }
-  .text-box {
-    height: 74%;
-    top: 13%;
-    width: 76%;
-    left: 12%;
-  }
-  .padding-bottom {
-    padding-bottom: 60px
-  }
-}
 
 .text-box h2 {
   margin: 0;
@@ -271,7 +244,7 @@ body {
   height: 90%;
 }
 .text p:last-child {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .text a {
   font-family: 'Redaction 50';
@@ -325,4 +298,60 @@ body {
   mix-blend-mode: exclusion;
   z-index: 20;
   pointer-events: none;
+}
+
+
+@media (max-width: 900px) {
+  .info-container {
+    max-width: 65%;
+    justify-content: right;
+  }
+  .text-box {
+    height: 74%;
+    top: 13%;
+    width: 76%;
+    left: 12%;
+  }
+  .padding-bottom {
+    padding-bottom: 60px
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    line-height: 3.5rem;
+    font-size: 4rem;
+  }
+  .section-title {
+    line-height: 3.5rem;
+    font-size: 4rem;
+  }
+  .info-container {
+    font-size: 1.2rem;
+    max-width: 75%;
+    justify-content: right;
+  }
+  .join-button {
+    font-size: 3rem;
+    padding: 6px;
+  }
+  .text-box {
+    height: 68%;
+    top: 16%;
+    width: 86%;
+    left: 7%;
+  }
+  .text-box h2 {
+    padding: 0 24px;
+  }
+  .text {
+    padding: 0 24px;
+    font-size: 1rem;
+  }
+  .text img {
+    width: 100%;
+  }
+  .padding-bottom {
+    padding-bottom: 80px
+  }
 }
