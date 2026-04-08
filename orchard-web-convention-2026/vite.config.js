@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/orchard-diy-web-convention/',
     build: {
         rolldownOptions: {
             input: {
