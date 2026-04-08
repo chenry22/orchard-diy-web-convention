@@ -24,6 +24,13 @@
   src: url("assets/Redaction_2_001/webfonts/Redaction_100-Regular.woff2") format('woff2'),
 }
 
+html {
+  cursor: none;
+}
+a:hover {
+  cursor: none;
+}
+
 body {
   background: black;
 }
@@ -47,31 +54,57 @@ body {
 }
 .title {
   pointer-events: none;
-  width: 70%;
+  width: 68%;
   color: white;
   line-height: 5rem;
   font-size: 6.2rem;
   animation: font-change 8s alternate-reverse ease-in-out infinite;
 }
 
-.intro-title {
+.section-title {
   z-index: -1;
   width: 72%;
   pointer-events: all;
   color: white;
   line-height: 5rem;
   font-size: 6.2rem;
-  font-family: 'Redaction 100';
 }
-.intro-title a {
+.section-title a {
   color: white;
   text-decoration: none;
 }
+.section-title:hover {
+  font-style: italic;
+  /* cursor: pointer; */
+}
+
+.intro-title {
+  font-family: 'Redaction 100';
+}
 .intro-title:hover {
   font-family: 'Redaction 70';
-  font-style: italic;
-  cursor: pointer;
 }
+.website-title {
+  font-family: 'Redaction 70';
+}
+.website-title:hover {
+  font-family: 'Redaction 50';
+}
+.convention-title {
+  font-family: 'Redaction 50';
+}
+.convention-title:hover {
+  font-family: 'Redaction 35';
+}
+.more-title {
+  font-family: 'Redaction 35';
+}
+.more-title:hover {
+  font-family: 'Redaction 20';
+}
+
+
+
 
 @keyframes rotate {
   0% { transform: rotate(0); }
@@ -90,7 +123,7 @@ body {
 .join-button:hover {
   color: rgb(255, 255, 221);
   text-shadow: 0 0 70px rgba(189, 124, 255, 0.8);
-  cursor: pointer;
+  /* cursor: pointer; */
   animation: rotate 10s infinite linear;
 }
 
@@ -114,28 +147,37 @@ body {
 }
 
 .info-container {
+  max-width: 70%;
+  width: fit-content;
   z-index: 12;
   font-family: 'Redaction 100';
   font-size: 1.5rem;
   position: fixed;
   right: 20px;
   bottom: 20px;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  justify-content: stretch;
+
+  gap: 14px;
   padding: 6px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.info-container:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .info-container div {
   padding: 10px 14px;
   background-color: rgba(255, 255, 255, 0.7);
 }
-.info-container div a {
+.info-container a {
   color: black;
   text-decoration: none;
 }
 .info-container div:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 11px 15px;
   font-family: 'Redaction 35';
   background-color: rgba(255, 255, 255, 0.9);
@@ -161,6 +203,8 @@ body {
   animation: glow alternate-reverse infinite 3s ease-in-out;
 }
 
+
+
 .text-box {
   font-family: 'Redaction 20';
   position: fixed;
@@ -170,18 +214,91 @@ body {
   left: 25%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.98);
-  padding: 20px 36px;
+  padding: 20px 0;
   word-wrap: break-word;
 }
+
+@media (max-width: 900px) {
+  .info-container {
+    max-width: 65%;
+    justify-content: right;
+  }
+  .text-box {
+    width: 80%;
+    left: 10%;
+  }
+  .padding-bottom {
+    padding-bottom: 60px
+  }
+}
+
 .text-box h2 {
   margin: 0;
-  padding: 0;
+  margin-bottom: 6px;
+  padding: 0 36px;
   font-family: 'Redaction 50';
   font-size: 2rem;
+  line-height: 2rem;
 }
 .text {
   font-size: 1rem;
   margin-top: 4px;
+  padding: 0 36px;
   overflow: hidden auto;
   height: 90%;
+}
+.text p:last-child {
+  padding-bottom: 60px;
+}
+.text a {
+  font-family: 'Redaction 50';
+  text-decoration: none;
+  color: rgb(23, 23, 137);
+}
+.text a:hover {
+  font-style: italic;
+  color: rgb(54, 54, 189);
+}
+.yarnding {
+  font-family: 'Yarndings 20';
+  font-size: 20px;
+  text-align: center;
+}
+.text ul {
+  font-style: italic;
+}
+.text li {
+  font-family: 'Redaction 50';
+  font-size: 1.2rem;
+}
+.text li:hover {
+  color: rgb(169, 16, 16);
+  font-family: 'Redaction 35';
+  font-style: normal;
+  /* cursor: default; */
+}
+
+.text img {
+  max-height: fit-content;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  width: 70%;
+  transition: box-shadow 0.6s ease-in-out;
+}
+.text img:hover {
+  box-shadow: 0 0 28px rgb(255, 236, 61, 0.9);
+}
+
+#mouseLight {
+  top: -100;
+  left: -100;
+  font-family: 'Yarndings 20';
+  position: fixed;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px rgb(250, 1, 1);
+  mix-blend-mode: exclusion;
+  z-index: 20;
+  pointer-events: none;
 }
