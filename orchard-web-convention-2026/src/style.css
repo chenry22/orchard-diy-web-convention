@@ -293,6 +293,7 @@ body {
 .text li {
   font-family: 'Redaction 50';
   font-size: 1.2rem;
+  padding: 4px 0;
 }
 .text li a:hover {
   color: rgb(62, 74, 215);

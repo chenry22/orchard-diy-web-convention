@@ -2,6 +2,7 @@ import Graph from "graphology";
 import ForceSupervisor from "graphology-layout-force/worker";
 import EdgeCurveProgram from "@sigma/edge-curve";
 import Sigma from "sigma";
+import type { Attributes } from "graphology-types";
 
 let ROTATION_SPEED = 0.0015;
 
@@ -44,9 +45,9 @@ layout.start();
 
 
 // for rotation
-function getGraphCenter(graph) {
+function getGraphCenter(graph: Graph) {
   let xSum = 0, ySum = 0, count = 0;
-  graph.forEachNode((_, attrs) => {
+  graph.forEachNode((_: any, attrs: Attributes) => {
     xSum += attrs.x;
     ySum += attrs.y;
     count++;
@@ -55,7 +56,7 @@ function getGraphCenter(graph) {
 }
 let graphCenter = getGraphCenter(graph);
 
-function rotateGraph(graph, angle, center) {
+function rotateGraph(graph: Graph, angle: number, center: any) {
   const cos = Math.cos(angle);
   const sin = Math.sin(angle);
 
@@ -78,7 +79,10 @@ function rotateGraph(graph, angle, center) {
 
 // main graph renderer
 window.addEventListener('load', () => {
-  const renderer = new Sigma(graph, document.getElementById("container"), { 
+  let container: HTMLElement | null = document.getElementById("container");
+  if (!container) { return; }
+
+  const renderer = new Sigma(graph, container, { 
     minCameraRatio: 0.9, maxCameraRatio: 1.5,
     cameraPanBoundaries: { tolerance: 0, boundaries: { x: [-4, 4], y: [-3, 3] }},
     defaultDrawNodeLabel: () => { return false; },
@@ -91,7 +95,7 @@ window.addEventListener('load', () => {
 
 
   // interaction
-  let draggedNode = null;
+  let draggedNode: string | null = null;
   let isDragging = false;
   let redirect = true;
 
