@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!-- (Adapted / stolen from Visual Principles for the Screen FL25, a WashU class taught by Laurel Schwulst)
+
+INSTRUCTIONS:
+
+1) Create a new account on neocities.org.
+
+2) Sign up for the free account. Verify your email address if you can.
+
+3) Go back to Neocities. Log in.
+   At the top right, find your username.
+   Click it, and then click on "Profile" in the dropdown.
+
+4) On your profile, edit "index.html." This is your homepage.
+
+5) Delete the existing code. 
+   Then, copy the complete code from this example (Ctrl+A, Ctrl+C)
+   Paste the code inside your index.html (Ctrl+V)
+
+7) Modify your index.html to make your own profile card!
+
+   * Fill in your name, favorite color, favorite aspect ratio, etc.
+
+   * If you feel compelled, put in the comments why you chose these things.
+     You can create an HTML comment with the tag   /* (comment) */
+   
+   * This website is written in HTML and CSS. 
+     Right now it's not important to know everything about them.
+     Just try editing a little of this page and viewing the result after you press "Save" (or Ctrl+S)
+     Keep doing this until you like your card!
+
+-->
+
+<html>
+  <!-- The <head> section of an HTML page contains the "metadata" of your site. 
+       It is used by a browser to set up your page, with content that's not actually displayed on the main page
+       This includes:
+        - The site name that shows up on a browser tab
+        - External fonts that need to be loaded
+        - Screen size scaling information
+        - (sometimes) CSS styling and JavaScript functionality
+    -->
+  <head>
+    <!-- This changes the name of the site in the browser tab! -->
+    <title>Website Name</title>
+
+    <!-- Don't worry about this stuff for now... but feel free to look it up if you're curious -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <!-- These are some default stylings that set up the structure of this page.
+        Feel free to ignore this or mess around with it, but know that really it's just creating the main framing of the block you're seeing.
+        If you have any questions definitely ask someone or use your favorite search engine to learn more!
+      -->
+    <style>
+      html, body {
+        height: 100vh;
+      }
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-bottom: 5em;
+      }
+      .profile {
+        text-transform: none;
+        padding: 1em;
+        line-height: 1.25;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      .profile-top {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr;
+      }
+      .profile-bottom {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+      .profile-top div {
+        padding: 1em;
+      }
+      .profile-bottom div {
+        padding: 0.5em 0.5em 0.5em 0;
+        border-top: 1px solid black;
+        font-size: 14px;
+      }
+      .motto {
+        font-size: 14px;
+        line-height: 1.25;
+        font-style: italic;
+      }
+      .profile-bottom .selection {
+        border-left: 1px solid black;
+        padding-left: 0.75em;
+      }
+      .aspect-ratio {
+        margin-right: 1em;
+        margin-bottom: 1em;
+      }
+      .profile-top .name-and-motto {
+        padding: 0.25em 0.25em 2.5em 0;
+      }
+      .profile-top div.name {
+        padding: 0 0 0 0.2em;
+        font-size: 60px;
+      }
+      .profile details summary {
+        font-weight: normal;
+      }
+      .profile-bottom .outro {
+        border-top: 1px solid black;
+        grid-column: 1 / 3;
+        font-family: monospace;
+        font-size: 12px;
+        padding-top: 0.85em;
+      }
+      .webring {
+        margin-top: 1em;
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+      }
+      .webring a {
+        font-size: 14px;
+        padding: 0.5em 1em;
+      }
+      .home {
+        position: absolute;
+        opacity: 0.8;
+        top: 0.6em;
+        left: 0.6em;
+        padding: 0.2em 0.4em;
+      }
+      .home a {
+        text-decoration: none;
+      }
+      .home:hover {
+        opacity: 1;
+      }
+      @media (max-width: 1200px) {
+        html, body {
+          height: auto;
+        }
+        main {
+          height: auto;
+          display: block;
+          margin-top: 5em;
+        }
+      }
+    </style>
+
+
+
+    <!-- Here is where you should edit the styling of this page! -->
+    <style>
+      html, body {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .profile {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+      
+      .aspect-ratio {
+        /* Research aspect ratios and choose your favorite... */
+        aspect-ratio: 1 / 1;
+
+        /* Choose your favorite color! You can find a nice collection of colors here: https://sanzo-wada.dmbk.io */
+        background-color: #d5d5d5;
+      }
+
+      .profile-top div.name {
+        /* Choose the typeface for your name to display in. Learn about font stacks here: https://www.cssfontstack.com */
+          /* Make sure to learn about the typeface you choose and consider why you are choosing it */
+          /* If you want help using a custom font (e.g. one from https://fonts.google.com) ask one of us! */
+
+        font-family: "Times New Roman", serif;
+
+        font-size: 60px;
+
+        /* You can also try other CSS properties like font-weight, font-style, etc. */
+        /* Reference: https://cssreference.io */
+      }
+
+      /* Styling for the webring links! */
+      .webring a {
+        background-color: white;
+        font-size: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+
+      /* styling for the sun icon in the top left which links to our home page! */
+      .home {
+        background-color: rgb(92, 154, 225);
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+      .home a {
+        color: rgb(255, 236, 33);
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="profile">
+        <div class="profile-top">
+          <div class="aspect-ratio"></div>
+          <div class="name-and-motto">
+
+            <!-- Put your name here! Remember to not touch the <div> or </div> parts, just the part inside -->
+            <div class="name">Name</div>
+
+            <!-- Delete the motto text and put your own motto. -->
+            <div class="motto">
+              A saying, or perhaps a phrase, that represents you...
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-bottom">
+          <div class="category">Aspect ratio</div>
+            <!-- Write the aspect ratio you chose below -->
+          <div class="selection">1:1 — Square</div>
+
+          <div class="category">Color</div>
+            <!-- Write the color you chose below, along with its hex code -->
+          <div class="selection">Gray — #d5d5d5</div>
+            <!-- Colors on the web can also be displayed in RGB (red, green, blue) and some known color names.
+              More here: https://en.wikipedia.org/wiki/Web_colors -->
+
+          <div class="category">Typeface</div>
+          <!-- Write the typeface you chose below -->
+          <div class="selection">Times New Roman</div>
+
+          <div class="category">Unicode</div>
+          <!-- Pick a favorite Unicode character, copy it, and paste it below -->
+          <!-- Google for lists or go here: https://en.wikipedia.org/wiki/List_of_Unicode_characters -->
+          <div class="selection">☀</div>
+
+          <div class="category">Music</div>
+          <div class="selection">
+            <!-- Share some music below. The <a> tag is a hyperlink or anchor tag, so place a link to some music
+                  in the "hypertext reference" (href) area and put what you want to title it inside of the <a> tag. -->
+            <a href="*">
+              A musical label
+            </a>
+          </div>
+
+          <div class="category">Desert Island Lists</div>
+          <div class="selection">
+            <!-- Put some of your Desert Island List content below. Feel free to adjust the categories to your liking! -->
+            <details>
+              <summary>Records</summary>
+              <ul>
+                <li>Blue Rev, Alvvays</li>
+                <li>Who Rules the World?, Inner City Witches</li>
+                <li>Let It Be, The Beatles</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Books</summary>
+              <ul>
+                <li>The Dream Machine</li>
+                <li>The Familiar: One Rainy Day</li>
+                <li>To the Lighthouse</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Technology</summary>
+              <ul>
+                <li>Google Docs</li>
+                <li>Honda Civic CD Player</li>
+                <li>Voice Memos App</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Sign off here -->
+          <div class="outro">Created on --/--/2026 at --:--pm in ---</div>
+        </div>
+      </div>
+
+
+
+      <!-- A web ring is a group of websites that all link to each other to form a circular structure (ring) 
+        Learn more here: https://en.wikipedia.org/wiki/Webring
+        
+        To make a webring, your site should be able to navigate to your adjacent neighbors!
+        Do this by adding their links to the follow anchor (<a>) tags!
+      -->
+      <div class="webring">
+        <a href="*">← Previous</a>
+        <a href="*">Next →</a>
+      </div>
+
+      <!-- This is just an overlay that links to the main page for this event! 
+        Feel free to change the styling of it, but keep the href the same -->
+      <div class="home">
+        <a href="link">☀</a>
+      </div>
+    </main>
+  </body>
+</html>
