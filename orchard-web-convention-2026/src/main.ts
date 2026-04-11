@@ -5,7 +5,7 @@ import Sigma from "sigma";
 import type { Attributes } from "graphology-types";
 
 // let ROTATION_SPEED = 0.0015;
-let ROTATION_SPEED = 0.002;
+let ROTATION_SPEED = 0.0018;
 
 const graph = new Graph();
 // graph.addNode("convention", { label: 'April 11th. 11am-1pm', x: -3, y: 0, size: 20, color: '#fff59e' });
