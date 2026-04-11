@@ -5,7 +5,7 @@ import Sigma from "sigma";
 import type { Attributes } from "graphology-types";
 
 // let ROTATION_SPEED = 0.0015;
-let ROTATION_SPEED = 0.004;
+let ROTATION_SPEED = 0.002;
 
 const graph = new Graph();
 // graph.addNode("convention", { label: 'April 11th. 11am-1pm', x: -3, y: 0, size: 20, color: '#fff59e' });
@@ -17,30 +17,30 @@ const graph = new Graph();
 // graph.addEdge("horse", "orchard", { type: 'curved', color: 'gray' });
 // graph.addEdge("orchard", "convention", { type: 'curved', color: 'gray' });
 
-graph.addNode("the", { label: 'THE EVENT IS HAPPENING', x: -3, y: 0, size: 20, color: '#fff59e' });
-graph.addNode("event", { label: 'RIGHT NOW!!!', x: -1, y: 1, size: 20, color: '#00d973' });
-graph.addNode("is", { label: 'GO GO GO!!!!', x: 1, y: 3, size: 20, color: '#94ff94' });
-graph.addNode("happening", { label: 'ORCHARD-ERS UNITE!!!!', x: 3, y: 1, size: 20, color: '#008aa1' });
-graph.addNode("right", { label: 'YAY!', x: 2, y: -1, size: 20, color: '#fff59e' });
-graph.addNode("now", { label: 'GET HYPED!', x: 0, y: -2, size: 20, color: '#00d973' });
+graph.addNode("Jun", { label: 'Shrine of Being', x: 2, y: -1, size: 20, color: '#fff59e' });
+graph.addNode("April", { label: 'Blankpagephobia', x: 0, y: -2, size: 20, color: '#ffffff' });
+graph.addNode("Star", { label: 'Boing', x: -3, y: 0, size: 20, color: '#bd1a1a' });
+graph.addNode("Ben", { label: 'Enter the Frutiger Midwest', x: -1, y: 1, size: 20, color: '#ffffff' });
+graph.addNode("Caleb", { label: 'Horse Convention', x: 1, y: 3, size: 20, color: '#2f7dfa' });
+graph.addNode("Kathryn", { label: 'bike', x: 3, y: 1, size: 20, color: 'rgb(230, 171, 63)' });
+graph.addNode("Grace", { label: 'grayspindle', x: 3, y: 1, size: 20, color: 'rgb(218, 252, 184)' });
+graph.addNode("Helen", { label: 'hives', x: 3, y: 1, size: 20, color: 'rgb(255, 0, 0)' });
 
-graph.addEdge("the", "event", { type: 'curved', color: 'gray' });
-graph.addEdge("event", "is", { type: 'curved', color: 'gray' });
-graph.addEdge("is", "happening", { type: 'curved', color: 'gray' });
-graph.addEdge("happening", "right", { type: 'curved', color: 'gray' });
-graph.addEdge("right", "now", { type: 'curved', color: 'gray' });
-graph.addEdge("now", "the", { type: 'curved', color: 'gray' });
+
+
+graph.addEdge("Jun", "April", { type: 'curved' });
+graph.addEdge("April", "Star", { type: 'curved' });
+graph.addEdge("Star", "Ben", { type: 'curved' });
+graph.addEdge("Ben", "Caleb", { type: 'curved' });
+graph.addEdge("Caleb", "Kathryn", { type: 'curved' });
+graph.addEdge("Kathryn", "Grace", { type: 'curved' });
+graph.addEdge("Grace", "Helen", { type: 'curved' });
+graph.addEdge("Helen", "Jun", { type: 'curved' });
 
 
 
 graph.addNode('center', { x: 0, y: 0, size: 10, color: '#ffe600' });
 graph.setNodeAttribute('center', "highlighted", true);
-
-// graph.addEdge("p1", "p2", { type: 'curved' });
-// graph.addEdge("p2", "p3", { type: 'curved' });
-// graph.addEdge("p3", "p4", { type: 'curved' });
-// graph.addEdge("p4", "p5", { type: 'curved' });
-// graph.addEdge("p5", "p1", { type: 'curved' });
 
 for (let node of graph.nodes()) {
   if (node !== 'center') {
@@ -147,14 +147,22 @@ window.addEventListener('load', () => {
         graph.removeNodeAttribute(draggedNode, "highlighted");
 
         if (redirect) {
-          if (draggedNode === 'convention') {
-            window.open('convention.html', '_self');
-          } else if (draggedNode === 'insta') {
-            window.open('https://www.instagram.com/reparativecomputing/', '_blank');
-          } else if (draggedNode === 'horse') {
-            window.open('https://gradient.horse', '_blank');
-          } else if (draggedNode === 'orchard') {
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLSfv3OifAdd2CCjsB6T4bzPlBcxBJPNNsBwlDGlOjcb-4VdiGA/viewform', '_blank');
+          if (draggedNode === 'Jun') {
+            window.open('convention.html', '_blank');
+          } else if (draggedNode === 'April') {
+            window.open('https://blankpagephobia.neocities.org/', '_blank');
+          } else if (draggedNode === 'Star') {
+            window.open('https://reparativecomputing.neocities.org', '_blank');
+          } else if (draggedNode === 'Ben') {
+            window.open('https://sackboyy.neocities.org', '_blank');
+          } else if (draggedNode === 'Caleb') {
+            window.open('https://horse-convention.neocities.org', '_blank');
+          } else if (draggedNode === 'Kathryn') {
+            window.open('https://dogmyers.neocities.org', '_blank');
+          } else if (draggedNode === 'Grace') {
+            window.open('https://grayspindle.neocities.org', '_blank');
+          } else if (draggedNode === 'Helen') {
+            window.open('https://hiveshiveshives.neocities.org', '_blank');
           }
         }
       }
