@@ -29,7 +29,6 @@ INSTRUCTIONS:
      Right now it's not important to know everything about them.
      Just try editing a little of this page and viewing the result after you press "Save" (or Ctrl+S)
      Keep doing this until you like your card!
-
 -->
 
 <html>
@@ -48,111 +47,6 @@ INSTRUCTIONS:
     <!-- Don't worry about this stuff for now... but feel free to look it up if you're curious -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-
-    <!-- These are some default stylings that set up the structure of this page.
-        Feel free to ignore this or mess around with it, but know that really it's just creating the main framing of the block you're seeing.
-        If you have any questions definitely ask someone or use your favorite search engine to learn more!
-      -->
-    <style>
-      html, body {
-        height: 100vh;
-      }
-      main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        padding-bottom: 5em;
-      }
-      .profile {
-        text-transform: none;
-        padding: 1em;
-        line-height: 1.25;
-        max-width: 450px;
-        margin: 0 auto;
-      }
-      .profile-top {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 2fr;
-      }
-      .profile-bottom {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-      }
-      .profile-top div {
-        padding: 1em;
-      }
-      .profile-bottom div {
-        padding: 0.5em 0.5em 0.5em 0;
-        border-top: 1px solid black;
-        font-size: 14px;
-      }
-      .motto {
-        font-size: 14px;
-        line-height: 1.25;
-        font-style: italic;
-      }
-      .profile-bottom .selection {
-        border-left: 1px solid black;
-        padding-left: 0.75em;
-      }
-      .aspect-ratio {
-        margin-right: 1em;
-        margin-bottom: 1em;
-      }
-      .profile-top .name-and-motto {
-        padding: 0.25em 0.25em 2.5em 0;
-      }
-      .profile-top div.name {
-        padding: 0 0 0 0.2em;
-        font-size: 60px;
-      }
-      .profile details summary {
-        font-weight: normal;
-      }
-      .profile-bottom .outro {
-        border-top: 1px solid black;
-        grid-column: 1 / 3;
-        font-family: monospace;
-        font-size: 12px;
-        padding-top: 0.85em;
-      }
-      .webring {
-        margin-top: 1em;
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-      }
-      .webring a {
-        font-size: 14px;
-        padding: 0.5em 1em;
-      }
-      .home {
-        position: absolute;
-        opacity: 0.8;
-        top: 0.6em;
-        left: 0.6em;
-        padding: 0.2em 0.4em;
-      }
-      .home a {
-        text-decoration: none;
-      }
-      .home:hover {
-        opacity: 1;
-      }
-      @media (max-width: 1200px) {
-        html, body {
-          height: auto;
-        }
-        main {
-          height: auto;
-          display: block;
-          margin-top: 5em;
-        }
-      }
-    </style>
-
 
 
     <!-- Here is where you should edit the styling of this page! -->
@@ -298,15 +192,123 @@ INSTRUCTIONS:
         Do this by adding their links to the follow anchor (<a>) tags!
       -->
       <div class="webring">
-        <a href="*">← Previous</a>
-        <a href="*">Next →</a>
+        <a href="#">← Previous</a>
+        <a href="#">Next →</a>
       </div>
 
       <!-- This is just an overlay that links to the main page for this event! 
         Feel free to change the styling of it, but keep the href the same -->
       <div class="home">
-        <a href="link">☀</a>
+        <a href="https://orchard-web-convention.netlify.app">☀</a>
       </div>
     </main>
   </body>
+
+
+
+
+  
+  <!-- These are some default stylings that set up the structure of this page.
+      Feel free to ignore this or mess around with it, but know that really it's just creating the main framing of the block you're seeing.
+      If you have any questions definitely ask someone or use your favorite search engine to learn more!
+      (Note: It's actually bad code styling to have these down here, but we thought it would be less confusing..)
+    -->
+  <style>
+    html, body {
+      height: 100vh;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding-bottom: 5em;
+    }
+    .profile {
+      text-transform: none;
+      padding: 1em;
+      line-height: 1.25;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    .profile-top {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 2fr;
+    }
+    .profile-bottom {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+    .profile-top div {
+      padding: 1em;
+    }
+    .profile-bottom div {
+      padding: 0.5em 0.5em 0.5em 0;
+      border-top: 1px solid black;
+      font-size: 14px;
+    }
+    .motto {
+      font-size: 14px;
+      line-height: 1.25;
+      font-style: italic;
+    }
+    .profile-bottom .selection {
+      border-left: 1px solid black;
+      padding-left: 0.75em;
+    }
+    .aspect-ratio {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+    .profile-top .name-and-motto {
+      padding: 0.25em 0.25em 2.5em 0;
+    }
+    .profile-top div.name {
+      padding: 0 0 0 0.2em;
+      font-size: 60px;
+    }
+    .profile details summary {
+      font-weight: normal;
+    }
+    .profile-bottom .outro {
+      border-top: 1px solid black;
+      grid-column: 1 / 3;
+      font-family: monospace;
+      font-size: 12px;
+      padding-top: 0.85em;
+    }
+    .webring {
+      margin-top: 1em;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+    }
+    .webring a {
+      padding: 0.5em 1em;
+    }
+    .home {
+      position: absolute;
+      opacity: 0.8;
+      top: 0.6em;
+      right: 0.6em;
+      padding: 0.2em 0.4em;
+    }
+    .home a {
+      text-decoration: none;
+    }
+    .home:hover {
+      opacity: 1;
+    }
+    @media (max-width: 1200px) {
+      html, body {
+        height: auto;
+      }
+      main {
+        height: auto;
+        display: block;
+        margin-top: 5em;
+      }
+    }
+  </style>
 </html>

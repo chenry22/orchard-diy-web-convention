@@ -4,20 +4,37 @@ import EdgeCurveProgram from "@sigma/edge-curve";
 import Sigma from "sigma";
 import type { Attributes } from "graphology-types";
 
-let ROTATION_SPEED = 0.0015;
+// let ROTATION_SPEED = 0.0015;
+let ROTATION_SPEED = 0.004;
 
 const graph = new Graph();
-graph.addNode("convention", { label: 'April 11th. 11am-1pm', x: -3, y: 0, size: 20, color: '#fff59e' });
-graph.addNode("insta", { label: 'Reparative Computing...', x: -1, y: 2, size: 20, color: '#00d973' });
-graph.addNode("horse", { label: '🐎', x: 1, y: 4, size: 20, color: '#94ff94' });
-graph.addNode("orchard", { label: 'Join the ORCHARD...', x: 3, y: 2, size: 20, color: '#008aa1' });
+// graph.addNode("convention", { label: 'April 11th. 11am-1pm', x: -3, y: 0, size: 20, color: '#fff59e' });
+// graph.addNode("insta", { label: 'Reparative Computing...', x: -1, y: 2, size: 20, color: '#00d973' });
+// graph.addNode("horse", { label: '🐎', x: 1, y: 4, size: 20, color: '#94ff94' });
+// graph.addNode("orchard", { label: 'Join the ORCHARD...', x: 3, y: 2, size: 20, color: '#008aa1' });
+// graph.addEdge("convention", "insta", { type: 'curved', color: 'gray' });
+// graph.addEdge("insta", "horse", { type: 'curved', color: 'gray' });
+// graph.addEdge("horse", "orchard", { type: 'curved', color: 'gray' });
+// graph.addEdge("orchard", "convention", { type: 'curved', color: 'gray' });
+
+graph.addNode("the", { label: 'THE EVENT IS HAPPENING', x: -3, y: 0, size: 20, color: '#fff59e' });
+graph.addNode("event", { label: 'RIGHT NOW!!!', x: -1, y: 1, size: 20, color: '#00d973' });
+graph.addNode("is", { label: 'GO GO GO!!!!', x: 1, y: 3, size: 20, color: '#94ff94' });
+graph.addNode("happening", { label: 'ORCHARD-ERS UNITE!!!!', x: 3, y: 1, size: 20, color: '#008aa1' });
+graph.addNode("right", { label: 'YAY!', x: 2, y: -1, size: 20, color: '#fff59e' });
+graph.addNode("now", { label: 'GET HYPED!', x: 0, y: -2, size: 20, color: '#00d973' });
+
+graph.addEdge("the", "event", { type: 'curved', color: 'gray' });
+graph.addEdge("event", "is", { type: 'curved', color: 'gray' });
+graph.addEdge("is", "happening", { type: 'curved', color: 'gray' });
+graph.addEdge("happening", "right", { type: 'curved', color: 'gray' });
+graph.addEdge("right", "now", { type: 'curved', color: 'gray' });
+graph.addEdge("now", "the", { type: 'curved', color: 'gray' });
+
+
+
 graph.addNode('center', { x: 0, y: 0, size: 10, color: '#ffe600' });
 graph.setNodeAttribute('center', "highlighted", true);
-
-graph.addEdge("convention", "insta", { type: 'curved', color: 'gray' });
-graph.addEdge("insta", "horse", { type: 'curved', color: 'gray' });
-graph.addEdge("horse", "orchard", { type: 'curved', color: 'gray' });
-graph.addEdge("orchard", "convention", { type: 'curved', color: 'gray' });
 
 // graph.addEdge("p1", "p2", { type: 'curved' });
 // graph.addEdge("p2", "p3", { type: 'curved' });

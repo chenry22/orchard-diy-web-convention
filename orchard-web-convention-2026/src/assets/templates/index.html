@@ -1,53 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Website Name</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-    </head>
 
-<body id="home">
-    <main class="full">
-        <p>Describe your collection here...</p>
+<!-- 
 
-        <div class="collection-grid">
-            <article class="item">
-                <a href="*">
-                    <div style="background-color: #3300ff" class="item-color"></div>
-                </a>
-                <div class="item-content">
-                    <a href="*">A website can be...</a>
-                    <time class="item-date">Wednesday, January 28, 2026 at 21:14</time>
-                </div>
-            </article>
+INSTRUCTIONS:
+
+1) Create a new account on neocities.org.
+
+2) Sign up for the free account. Verify your email address if you can.
+
+3) Go back to Neocities. Log in.
+   At the top right, find your username.
+   Click it, and then click on "Profile" in the dropdown.
+
+4) On your profile, edit "index.html." This is your homepage.
+
+5) Delete the existing code. 
+   Then, copy the complete code from this example (Ctrl+A, Ctrl+C)
+   Paste the code inside your index.html (Ctrl+V)
+
+7) Modify your index.html to make your own website! Here are some ideas on what to make your new site about:
+
+   * A site capturing the person you are at this very moment.
+    Example: https://web.archive.org/web/19980221223324/http://www.cs.wustl.edu/cs/
+
+   * A site dedicated to a piece of media or topic you're passionate about!
+    Example: https://www.spacejam.com/1996/
+    Example 2: https://www.dinostomatopie.com
+   
+   * A collection of things... images, words, links, ideas, or all of the above.
+    Example: https://memory.elliott.computer
+-->
+
+<html>
+  <head>
+    <title>Website Name</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <style>
+        /* these styles just set up the webring links, feel free to change them! */
+        .webring {
+            margin-top: 1em;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+        }
+        .webring a {
+            font-size: 14px;
+            padding: 0.5em 1em;
+
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+        }
+        .home {
+            position: absolute;
+            opacity: 0.8;
+            top: 0.6em;
+            right: 0.6em;
+            padding: 0.2em 0.4em;
+
+            background-color: rgb(92, 154, 225);
+            border: 1px solid rgba(0, 0, 0, 0.25);
+        }
+        .home a {
+            text-decoration: none;
+            color: rgb(255, 236, 33);
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .home:hover {
+            opacity: 1;
+        }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="content">
+
+        <!-- Put your site content here :) -->
+
+        <!-- A web ring is a group of websites that all link to each other to form a circular structure (ring) 
+         
+            Learn more here: https://en.wikipedia.org/wiki/Webring
             
-            <article class="item">
-                <a href="*">
-                    <div style="background-color: #ffea00" class="item-color"></div>
-                </a>                        
-                <div class="item-content">
-                    <a href="*">A collection of things...</a>
-                    <time class="item-date">Saturday, January 3, 2026 at 19:08</time>
-                </div>
-            </article>
-
-            <article class="item">
-                <a href="*">
-                    <div class="item-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLz1s5n5dc8Cg6xyH582-9sJ0exBPOHn9UHg&s" alt="Writing desk">
-                    </div>
-                </a>
-                <div class="item-content">
-                    <a href="*">An archive, of memories</a>
-                    <time class="item-date">Friday, December 5, 2025 at 21:18</time>
-                </div>
-            </article>
+            To make a webring, your site should be able to navigate to your adjacent neighbors! Do this by adding their links to the follow anchor (<a>) tags!
+        -->
+        <div class="webring">
+          <a href="#">← Previous</a>
+          <a href="#">Next →</a>
         </div>
-    </main>
+      </div>
 
-    <footer>
-        <!-- web ring here -->
-    </footer>
-</body>
+      <!-- This is just an overlay that links to the main page for this event! 
+        Feel free to change the styling of it, but keep the href the same -->
+      <div class="home">
+        <a href="https://orchard-web-convention.netlify.app">☀</a>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!-- (This idea is also low key stolen from Visual Principles for the Screen FL25, a WashU class taught by Laurel Schwulst)
+
+INSTRUCTIONS:
+
+1) Create a new account on neocities.org.
+
+2) Sign up for the free account. Verify your email address if you can.
+
+3) Go back to Neocities. Log in.
+   At the top right, find your username.
+   Click it, and then click on "Profile" in the dropdown.
+
+4) On your profile, edit "index.html." This is your homepage.
+
+5) Delete the existing code. 
+   Then, copy the complete code from this example (Ctrl+A, Ctrl+C)
+   Paste the code inside your index.html (Ctrl+V)
+
+7) Modify your index.html to create a site dedicated to a work of poetry! (If you hate poetry, maybe think of your favorite short story, or a piece of your own writing you think would be interesting to format as a website!)
+
+   * Find a piece that compels you online (a good starting point is https://www.poetryfoundation.org)
+
+   * Consider how you can highlight certain reactions, feelings, themes, or imagery from the poem through code...
+   
+   * Be sure to credit the original author!
+-->
+
+<html lang="en">
+    <head>
+        <title>Website Name</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            /* I like padding, but feel free to remove it... */
+            #poem {
+                padding: 10px 36px;
+            }
+
+            /* these styles just set up the webring links, feel free to change them! */
+            .webring {
+                margin-top: 1em;
+                display: flex;
+                gap: 14px;
+                justify-content: center;
+            }
+            .webring a {
+                font-size: 14px;
+                padding: 0.5em 1em;
+
+                background-color: white;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+            }
+            .home {
+                position: absolute;
+                opacity: 0.8;
+                top: 0.6em;
+                right: 0.6em;
+                padding: 0.2em 0.4em;
+
+                background-color: rgb(92, 154, 225);
+                border: 1px solid rgba(0, 0, 0, 0.25);
+            }
+            .home a {
+                text-decoration: none;
+                color: rgb(255, 236, 33);
+                font-size: 14px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .home:hover {
+                opacity: 1;
+            }
+    </style>
+    </head>
+
+<body>
+    <main>
+        <div id="poem">
+            <h1>Three Horses Drink Water at the Riverbank</h1>
+            <h3>BY CHI LECHUAN, TRANSLATED BY WANG PING</h3>
+
+            <p>One white, one red, one black<br>
+            Three horses are drinking at the riverbank<br>
+            <br>
+            They drink at their own pace, some up<br>
+            Some down<br>
+            Sometimes their heads reach the river<br>
+            At the same time<br>
+            <br>
+            As if a river were flowing<br>
+            Out of their mouths<br>
+            <br>
+            As their minds flow from the river source<br>
+            Still innocent, clear, undisturbed<br>
+            <br>
+            The sun is setting slowly<br>
+            A man watches, without blinking<br>
+            <br>
+            How a river disappears into the night<br>
+            Held in the mouths of three horses
+        </div>
+
+        <!-- A web ring is a group of websites that all link to each other to form a circular structure (ring) 
+            Learn more here: https://en.wikipedia.org/wiki/Webring
+            
+            To make a webring, your site should be able to navigate to your adjacent neighbors! Do this by adding their links to the follow anchor (<a>) tags!
+        -->
+        <div class="webring">
+          <a href="#">← Previous</a>
+          <a href="#">Next →</a>
+        </div>
+    </main>
+
+    <!-- This is just an overlay that links to the main page for this event! 
+        Feel free to change the styling of it, but keep the href the same -->
+    <div class="home">
+        <a href="https://orchard-web-convention.netlify.app">☀</a>
+    </div>
+</body>
+</html>
