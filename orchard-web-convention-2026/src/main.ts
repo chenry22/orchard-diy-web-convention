@@ -148,7 +148,7 @@ window.addEventListener('load', () => {
 
         if (redirect) {
           if (draggedNode === 'Jun') {
-            window.open('convention.html', '_blank');
+            window.open('https://junkim.neocities.org/', '_blank');
           } else if (draggedNode === 'April') {
             window.open('https://blankpagephobia.neocities.org/', '_blank');
           } else if (draggedNode === 'Star') {
